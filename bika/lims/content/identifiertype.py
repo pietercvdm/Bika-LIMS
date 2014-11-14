@@ -8,16 +8,16 @@ from bika.lims import bikaMessageFactory as _
 from bika.lims.content.bikaschema import BikaSchema
 from bika.lims.config import PROJECTNAME
 
-PortalTypes = LinesField(
-    'PortalTypes',
-    widget=MultiSelectionWidget(
-        label = _("Portal Types"),
-        description = _("Select the types that this ID is used to identify")
-    )
-)
+# PortalTypes = LinesField(
+#     'PortalTypes',
+#     widget=MultiSelectionWidget(
+#         label = _("Portal Types"),
+#         description = _("Select the types that this ID is used to identify")
+#     )
+# )
 
 schema = BikaSchema.copy() + Schema((
-    PortalTypes,
+#    PortalTypes,
 ))
 schema['description'].widget.visible = True
 schema['description'].schemata = 'default'
